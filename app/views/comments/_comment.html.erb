@@ -8,6 +8,7 @@ style="border: 1px solid black; padding: 1em; margin: 1em;">
   <% end %>
   <% if current_user == comment.user %>
     <div class="btn-group float-end">
+    <%= link_to "Edit", nil, remote: true, class: "btn btn-warning" %>
       <%= button_to "Delete", [post, comment], class: "btn btn-danger", method: :delete %>
     </div>
   <% end %>
