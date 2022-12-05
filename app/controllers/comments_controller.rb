@@ -26,9 +26,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to post_url(@post), notice "Comment has been updated" }
+        format.html { redirect_to post_url(@post), notice: "Comment has been updated" }
       else
-        format.html { redirect_to post_url(@post), notice "Comment was not updated" }
+        format.html { redirect_to post_url(@post), alert: "Comment was not updated" }
       end
     end
   end
