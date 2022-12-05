@@ -1,9 +1,9 @@
 # To deliver this notification:
 #
-# Comment.with(post: @post).deliver_later(current_user)
-# Comment.with(post: @post).deliver(current_user)
+# CommentNotification.with(post: @post).deliver_later(current_user)
+# CommentNotification.with(post: @post).deliver(current_user)
 
-class Comment < Noticed::Base
+class CommentNotification < Noticed::Base
   # Add your delivery methods
   #
   # deliver_by :database
